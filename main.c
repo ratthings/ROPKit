@@ -40,29 +40,30 @@
 // Example of a simple instruction: 0x11a4: pop rbp ; ret ; (1 found)
 #define MAX_ADDRESS 18
 typedef struct Gadget {
-  unsigned long address;
-  char **opcodes;
-  char *full_gadget;
+	unsigned long address;
+	char **opcodes;
+	char *full_gadget;
 } Gadget;
 
 typedef struct Node {
-  struct Gadget gadget;
-  struct Node *next;
+	struct Gadget gadget;
+	struct Node *next;
 } Node;
 
-int main(void) {
-  FILE *fp = NULL;
-  char *line = NULL;
+int main(void)
+{
+	FILE *fp = NULL;
+	char *line = NULL;
 
-  fp = prompt_user_and_open_file();
+	fp = prompt_user_and_open_file();
 
-  while ((line = get_next_line(fp)) != NULL) {
-    puts(line);
-    free(line);
-  }
+	while ((line = get_next_line(fp)) != NULL) {
+		puts(line);
+		free(line);
+	}
 
-  if (fp != NULL)
-    fclose(fp);
+	if (fp != NULL)
+		fclose(fp);
 
-  return 0;
+	return 0;
 }
