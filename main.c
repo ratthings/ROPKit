@@ -107,4 +107,3 @@ FILE *prompt_user_and_open_file(void) {
 
   return file_pointer;
 }
-
