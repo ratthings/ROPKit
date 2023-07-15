@@ -1,3 +1,26 @@
+// clang-format off
+/*** ROPKit
+ * 
+ *   ██████  ███▄    █  ▒█████   █     █░ ▄████▄   ██▀███   ▄▄▄        ██████  ██░ ██
+ * ▒██    ▒  ██ ▀█   █ ▒██▒  ██▒▓█░ █ ░█░▒██▀ ▀█  ▓██ ▒ ██▒▒████▄    ▒██    ▒ ▓██░ ██▒
+ * ░ ▓██▄   ▓██  ▀█ ██▒▒██░  ██▒▒█░ █ ░█ ▒▓█    ▄ ▓██ ░▄█ ▒▒██  ▀█▄  ░ ▓██▄   ▒██▀▀██░
+ *   ▒   ██▒▓██▒  ▐▌██▒▒██   ██░░█░ █ ░█ ▒▓▓▄ ▄██▒▒██▀▀█▄  ░██▄▄▄▄██   ▒   ██▒░▓█ ░██
+ * ▒██████▒▒▒██░   ▓██░░ ████▓▒░░░██▒██▓ ▒ ▓███▀ ░░██▓ ▒██▒ ▓█   ▓██▒▒██████▒▒░▓█▒░██▓
+ * ▒ ▒▓▒ ▒ ░░ ▒░   ▒ ▒ ░ ▒░▒░▒░ ░ ▓░▒ ▒  ░ ░▒ ▒  ░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒
+ * ░ ░▒  ░ ░░ ░░   ░ ▒░  ░ ▒ ▒░   ▒ ░ ░    ░  ▒     ░▒ ░ ▒░  ▒   ▒▒ ░░ ░▒  ░ ░ ▒ ░▒░ ░
+ * ░  ░  ░     ░   ░ ░ ░ ░ ░ ▒    ░   ░  ░          ░░   ░   ░   ▒   ░  ░  ░   ░  ░░ ░
+ *       ░           ░     ░ ░      ░    ░ ░         ░           ░  ░      ░   ░  ░  ░
+ *                                   Written by: snowcra5h@icloud.com (snowcra5h) 2023
+ *
+ * This program parses Return Oriented Programming (ROP) gadgets from rp++ output,
+ * and makes them quickly searchable. This allows for efficient exploration and 
+ * utilization of ROP gadgets in. The tool aims to improve the speed and experience 
+ * of working with ROP gadgets by providing a user-friendly interface.
+ * 
+ * Future enhancements include adding a GUI for an even more streamlined user experience.
+ */
+// clang-format on
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
